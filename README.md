@@ -1,5 +1,9 @@
 # Cade Krueger
 
+## Project Description
+
+### This is a simple version of Tic Tac Toe designed in Java to demonstrate algorithmic understanding of the MiniMax Algorithm. This algorithm is used to optimize the AI's moves given that the user is making the best moves for themselves.
+
 ## How to compile and run
 
 ### If using Visual Studio Code, ensure you have the Java Extension Pack downloaded. Make sure the "Game_Files" package contains the "Interfaces" package, Main.java, and SpotScore.java. The program can be run directly within the IDE after navigating to **File > Open Folder...** and choosing the folder containing these files. Have the Main class open in Visual Studio Code and click the **Run > Run Without Debugging** option.
@@ -7,7 +11,3 @@
 ### To run the file with no IDE on windows, open a command prompt. Navigate to the directory with the files using the command **cd [filepath]**. Enter the following two commands in succession **javac Main.java** and **java Main**.
 
 ### For other operating systems, look online for running java programs from the command prompt.
-
-## Experience solving this problem
-
-### This was a very fun project to work on. I was considering using JPanel and JFrame, but I just went with using the console. The hardest part was obviously getting the Minimax algorithm correct. I know I did not do it exactly as outlined in the assignment sheet, but it 100% works and it is mostly similar. The only differences are that I returned SpotScores instead of two ints, and I accounted for the depth of the recursion tree, so my return values when checking the board state were 10, 0, -10. I also made my own function for finding the max/min that chooses a max/min value randomly rather than always choosing the first one. The first way I went about representing the board was having the 3x3 array, along with a list of available spots. This did not work too well with the recursion as I kept getting ConcurrentModificationExceptions, so I just bailed on that idea. The most helpful thing for me was walking through my algorithm on paper with a board that had 3 empty spots. It helped me to see where different things within the recursion needed to happen, such as where do we check the board state, which spot we should be returning (the actual current spot, or the high level spot that represents the move to be made at depth 0 (in other words, the best move given the very first board we send in to the Minimax algorithm.)). I also just learned how to use method refs and functional interfaces so excuse me if I overused them. Also, I know that my code could be organized better and split out between different files, but I figure this works well enough. 
